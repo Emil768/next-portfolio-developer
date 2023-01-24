@@ -12,12 +12,12 @@ function Home() {
   return (
     <section className={styles.home}>
       <Head>
-        <title>Emil Murahas frontend portfolio</title>
+        <title>Emil Murahas | Portfolio</title>
         <meta
           name="description"
           content="My name is Emil,I'm a front-end developer from Crimea! This is my portfolio."
         />
-        <meta property="og:title" content="Emil Murahas frontend portfolio" />
+        <meta property="og:title" content="Emil Murahas | Portfolio" />
         <meta
           property="og:description"
           content="My name is Emil,I'm a front-end developer from Crimea! This is my portfolio."
