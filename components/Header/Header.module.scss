@@ -1,0 +1,77 @@
+.header {
+  &__content {
+    padding-top: 40px;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+  }
+  .list {
+    display: flex;
+    &__item {
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      font-size: 25px;
+      border-bottom: 0px solid transparent;
+      padding-bottom: 10px;
+      position: relative;
+      &:hover {
+        color: #3fc5ff;
+      }
+    }
+  }
+  .linkLeftActive {
+    color: #3fc5ff;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 4px solid #3fc5ff;
+      transform: rotate(7deg);
+    }
+  }
+
+  .linkRightActive {
+    color: #3fc5ff;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 4px solid #3fc5ff;
+      transform: rotate(-4deg);
+    }
+  }
+  .linkLeft {
+    &:hover:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 4px solid #3fc5ff;
+      transform: rotate(7deg);
+    }
+  }
+
+  .linkRight {
+    &:hover:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 4px solid #3fc5ff;
+      transform: rotate(-4deg);
+    }
+  }
+
+  .container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+  }
+}
