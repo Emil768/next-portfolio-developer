@@ -1,5 +1,5 @@
 .projects {
-  background-image: url("../public/img/banner.png");
+  background-image: url("../public/img/banner.webp");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -142,7 +142,8 @@
     &__top {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      line-height: 1.5;
+      margin-bottom: 16px;
     }
     &__links {
       display: flex;
@@ -151,6 +152,9 @@
     &__link {
       margin-left: 10px;
       display: flex;
+    }
+    &__linkText {
+      display: none;
     }
 
     &__linkDefault {

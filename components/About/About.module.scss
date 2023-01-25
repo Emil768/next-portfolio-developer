@@ -8,6 +8,7 @@
     position: relative;
 
     img {
+      object-fit: contain;
       position: absolute;
       right: -30px;
       top: 30px;
@@ -31,6 +32,7 @@
   &__arrow {
     position: relative;
     img {
+      object-fit: contain;
       position: absolute;
       bottom: 0;
       top: 50%;
