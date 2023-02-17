@@ -1,17 +1,13 @@
 import styles from "./About.module.scss";
-
 import { skills } from "data";
-
 import { AuthorIcon, ArrowIcon } from "public/img";
-
 import Image from "next/image";
 
 const About = () => (
   <section className={styles.about}>
     <div className={styles.about__top}>
-      {" "}
       <h1 className={styles.about__title} data-aos="zoom-in-down">
-        Get to know me!
+        Get to <span className={styles["about__color-text"]}>know</span> me!
       </h1>
       <Image
         data-aos="zoom-in-left"

@@ -17,8 +17,7 @@
 
   &__title {
     font-size: 35px;
-    font-family: cursive;
-    font-weight: 400;
+    font-family: "Nexa", Arial, Helvetica, sans-serif;
   }
   &__wrapper {
     margin: 20px 0 40px 0;
@@ -29,6 +28,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  &__color-text {
+    color: #b691d2;
   }
 
   &__arrow {
@@ -59,8 +61,7 @@
   &__title {
     margin-bottom: 40px;
     font-size: 25px;
-    font-family: cursive;
-    font-weight: 400;
+    font-family: "Nexa", Arial, Helvetica, sans-serif;
   }
 
   &__list {
