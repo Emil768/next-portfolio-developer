@@ -3,7 +3,10 @@ import styles from "styles/Home.module.scss";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import { ReactIcon } from "public/img";
 import Head from "next/head";
+import Image from "next/image";
 
 function Home() {
   useEffect(() => {
@@ -49,7 +52,10 @@ function Home() {
                 I do <span className={styles.langColor}>front-end</span>{" "}
                 development and some
                 <span className={styles.designColor}> UI design</span> 🎨
-                <br /> Love 💖 JavaScript, ReactJS ⚛️
+                <br /> Love 💖 JavaScript, ReactJS
+                <span className={styles.home__image}>
+                  <Image src={ReactIcon} fill alt="react" />
+                </span>
               </p>
             </div>
             <span data-aos="zoom-in" data-aos-duration="800">

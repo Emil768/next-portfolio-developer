@@ -13,3 +13,4 @@ export { default as GithubIcon } from "./github.svg";
 export { default as LinkIcon } from "./link.svg";
 export { default as YoutubeIcon } from "./youtube.svg";
 export { default as NextPortfolioIcon } from "./next-portfolio.png";
+export { default as ReactIcon } from "./react.svg";

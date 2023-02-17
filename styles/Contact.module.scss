@@ -1,6 +1,6 @@
 .contact {
   padding-top: 120px;
-  background-image: url("../public/img/banner_default.webp");
+  background-image: url("/img/banner_default.webp");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -13,6 +13,8 @@
   &__title {
     font-size: 35px;
     margin-bottom: 20px;
+    font-family: cursive;
+    font-weight: 400;
   }
   &__text {
     font-size: 18px;
