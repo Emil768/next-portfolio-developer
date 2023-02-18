@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styles from "styles/Contact.module.scss";
-
 import emailjs from "emailjs-com";
-
 import { ClipLoader } from "react-spinners";
 import Head from "next/head";
 

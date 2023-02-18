@@ -41,6 +41,10 @@
       flex-wrap: wrap;
       margin-bottom: 40px;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       &:nth-child(2n) {
         flex-direction: row-reverse;
         .list {
