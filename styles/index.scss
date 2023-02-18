@@ -19,11 +19,71 @@ html {
     border-radius: 20px;
     background: rgba(70, 70, 70, 0.4);
   }
+  &.dark body {
+    color: #66cbf7;
+    a {
+      color: #66cbf7;
+    }
+    p {
+      color: #fff;
+    }
+
+    input,
+    textarea,
+    button {
+      background-color: #fff;
+      color: #1c1e22;
+    }
+    .skills__item-dark {
+      background-color: transparent;
+      border: 1px solid #66cbf7;
+    }
+    .overlay-dark {
+      background-color: rgba(28, 30, 34, 0.6);
+    }
+    .list__info-dark {
+      background-color: #1c1e22;
+      border: 1px solid #66cbf7;
+    }
+  }
+  &.light body {
+    color: #1c1e22;
+  }
+
+  &.dark {
+    .home__bg {
+      background-image: url("/img/banner_rotate_dark.webp");
+    }
+    .works__bg {
+      background-image: url("/img/banner_dark.webp");
+    }
+    .contact__bg {
+      background-image: url("/img/banner_default_dark.webp");
+    }
+  }
 }
 
 body {
   margin: 0;
   font-family: "Proxima Nova Rg", Arial, Helvetica, sans-serif;
+}
+
+.home__bg {
+  background-image: url("/img/banner_rotate.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.works__bg {
+  background-image: url("/img/banner.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.contact__bg {
+  background-image: url("/img/banner_default.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ul {

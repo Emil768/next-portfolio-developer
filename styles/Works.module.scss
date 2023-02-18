@@ -1,7 +1,4 @@
-.projects {
-  background-image: url("/img/banner.webp");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+.works {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,14 +191,13 @@
     display: flex;
     flex-wrap: wrap;
     line-height: 1.8;
+    gap: 10px;
   }
 
   .tag {
     font-size: 12px;
     padding: 6px 16px;
     background-color: #d7e8ff;
-    margin-right: 10px;
-    margin-bottom: 10px;
   }
 
   .container {
@@ -213,7 +209,7 @@
 }
 
 @media (max-width: 1448px) {
-  .projects {
+  .works {
     .list {
       &__item,
       &__item:nth-child(2n) {
@@ -256,7 +252,7 @@
 }
 
 @media (max-width: 800px) {
-  .projects {
+  .works {
     background-size: cover;
     &__content {
       padding-top: 100px;
@@ -264,6 +260,19 @@
     .list {
       &__preview {
         height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .works {
+    .list {
+      &__info {
+        width: 100%;
+      }
+      &__preview {
+        width: 100%;
       }
     }
   }

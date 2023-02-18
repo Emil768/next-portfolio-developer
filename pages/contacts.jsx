@@ -33,7 +33,7 @@ function Contact() {
   }
 
   return (
-    <section className={styles.contact}>
+    <section className={`${styles.contact} contact__bg`}>
       <Head>
         <title>Contacts | Emil Murahas</title>
         <meta

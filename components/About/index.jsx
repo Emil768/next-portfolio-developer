@@ -64,7 +64,10 @@ const About = () => (
       </h2>
       <ul className={styles.skills__list}>
         {skills.map((item, index) => (
-          <li className={styles.skills__item} key={index}>
+          <li
+            className={`${styles.skills__item} skills__item-dark`}
+            key={index}
+          >
             {item}
           </li>
         ))}

@@ -1,11 +1,10 @@
 .contact {
   padding-top: 120px;
-  background-image: url("/img/banner_default.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 
   &__content {
     max-width: 800px;

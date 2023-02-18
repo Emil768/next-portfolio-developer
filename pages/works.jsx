@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
-
 import styles from "styles/Works.module.scss";
 import Image from "next/image";
 import About from "@/components/About";
 import { projects } from "@/data";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
 
-function Projects() {
+function Works() {
   useEffect(() => {
     AOS.init({ disable: "phone" });
   }, []);
   return (
-    <section className={styles.projects}>
+    <section className={`${styles.works} works__bg`}>
       <Head>
         <title>Works | Emil Murahas</title>
         <meta
@@ -31,11 +29,11 @@ function Projects() {
       </Head>
       <div className={styles.container}>
         <About />
-        <div className={styles.projects__content}>
-          <h2 className={styles.projects__title} data-aos="zoom-in-down">
-            Projects{" "}
+        <div className={styles.works__content}>
+          <h2 className={styles.works__title} data-aos="zoom-in-down">
+            Projects
           </h2>
-          <p className={styles.projects__subtitle} data-aos="zoom-in">
+          <p className={styles.works__subtitle} data-aos="zoom-in">
             Here you can look at my pet projects, as well as commercial ones,
             unfortunately not all projects have been released or can be shown.
           </p>
@@ -43,7 +41,7 @@ function Projects() {
             {projects.map((item, index) => (
               <div className={styles.list__item} key={index}>
                 <div
-                  className={styles.list__info}
+                  className={`${styles.list__info} list__info-dark`}
                   data-aos="zoom-in"
                   data-aos-duration="1200"
                 >
@@ -130,7 +128,10 @@ function Projects() {
                   <p className={styles.list__itemText}>{item.text}</p>
                   <ul className={styles.tags}>
                     {item.tags.map((item, index) => (
-                      <li className={styles.tag} key={index}>
+                      <li
+                        className={`${styles.tag} skills__item-dark`}
+                        key={index}
+                      >
                         {item}
                       </li>
                     ))}
@@ -147,7 +148,7 @@ function Projects() {
                     src={item.preview}
                     alt="project preview"
                   />
-                  <div className={styles.list__overlay}>
+                  <div className={`${styles.list__overlay} overlay-dark`}>
                     <a href={item.link} target="_blank" rel="noreferre">
                       GO!
                     </a>
@@ -162,4 +163,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Works;

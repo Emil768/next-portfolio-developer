@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "styles/Home.module.scss";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { ReactIcon } from "public/img";
 import Head from "next/head";
 import Image from "next/image";
@@ -13,7 +11,7 @@ function Home() {
     AOS.init({ disable: "phone" });
   }, []);
   return (
-    <section className={styles.home}>
+    <section className={`${styles.home} home__bg`}>
       <Head>
         <title>Emil Murahas | Portfolio</title>
         <meta

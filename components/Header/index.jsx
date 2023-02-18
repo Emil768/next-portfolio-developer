@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Header.module.scss";
 
+import { ThemeButton } from "../ThemeButton";
+
 const Header = () => {
   const router = useRouter();
 
@@ -36,6 +38,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+          <ThemeButton />
         </div>
       </div>
     </header>
