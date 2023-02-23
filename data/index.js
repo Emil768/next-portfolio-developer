@@ -12,6 +12,7 @@ export const skills = [
   "HTML",
   "CSS",
   "Sass",
+  "Less",
   "JavaScript",
   "ReactJs",
   "NextJs",
@@ -41,14 +42,14 @@ export const projects = [
       "NodeJs",
       "Axios",
       "MongoDB",
-      "Express",
+      "ExpressJs",
       "Cloudinary",
       "JWT",
       "Bcrypt",
     ],
     youtube: "https://youtu.be/fFeWCmT8N34",
     link: "https://next-porfolio-courses.vercel.app/tests",
-    gitLink: "https://github.com/EmilMurahas228/next-porfolio-courses",
+    gitLink: "https://github.com/Emil768/next-porfolio-courses",
   },
   {
     preview: React_notesIcon,
@@ -68,7 +69,7 @@ export const projects = [
     ],
     youtube: "https://www.youtube.com/watch?v=4k2BAI6sUro",
     link: "https://mern-notes-frontend.vercel.app/",
-    gitLink: "https://github.com/EmilMurahas228/mern-notes-frontend",
+    gitLink: "https://github.com/Emil768/mern-notes-frontend",
   },
 
   {
@@ -85,7 +86,7 @@ export const projects = [
     ],
     youtube: "https://youtu.be/jMoqcv50YTk",
     link: "https://react-comix-v-2.vercel.app/",
-    gitLink: "https://github.com/EmilMurahas228/react-comix-v.2",
+    gitLink: "https://github.com/Emil768/react-comix-v.2",
   },
 
   {
@@ -95,7 +96,7 @@ export const projects = [
     tags: ["HTML", "CSS", "Javascript"],
     youtube: "https://youtu.be/SyyN3Ff0aiI",
     link: "https://internet-shop-six.vercel.app/",
-    gitLink: "https://github.com/EmilMurahas228/react-internet-shop",
+    gitLink: "https://github.com/Emil768/react-internet-shop",
   },
 
   {
@@ -105,7 +106,7 @@ export const projects = [
     tags: ["ReactJs", "Typescript", "GithubApi"],
     youtube: "https://youtu.be/42UE1EwNBB0",
     link: "https://github-finder-psi-nine.vercel.app/",
-    gitLink: "https://github.com/EmilMurahas228/github-finder",
+    gitLink: "https://github.com/Emil768/github-finder",
   },
 
   {
@@ -114,8 +115,8 @@ export const projects = [
     text: "Application inspired by the files tab in vk.com.Of course, this is not a social network where files play a significant role, but I think it turned out to be a pretty good copy!",
     tags: ["ReactJs", "NodeJs", "Express", "Multer"],
     youtube: "https://youtu.be/rqeKnopTt28",
-    link: "https://emilmurahas228.github.io/vk-loader/",
-    gitLink: "https://github.com/EmilMurahas228/vk-loader",
+    link: "https://emil768.github.io/vk-loader/",
+    gitLink: "https://github.com/Emil768/vk-loader",
   },
 
   {
@@ -124,7 +125,7 @@ export const projects = [
     text: "Probably there is no such person who did not make todo application there, so I also decided to do something similar, only using native tools.",
     tags: ["HTML", "CSS", "Javascript"],
     youtube: "https://youtu.be/xjGsgZEMCZw",
-    link: "https://emilmurahas228.github.io/Trello-clone-js/",
-    gitLink: "https://github.com/EmilMurahas228/Trello-clone-js",
+    link: "https://emil768.github.io/Trello-clone-js",
+    gitLink: "https://github.com/Emil768/Trello-clone-js",
   },
 ];
