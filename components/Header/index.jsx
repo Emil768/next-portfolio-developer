@@ -9,38 +9,53 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.header__content}>
-          <ul className={styles.list}>
-            <li className={styles.list__item}>
+          <ul className={styles.header__list}>
+            <li className={styles["header__list-item"]}>
               <Link
                 href={"/works"}
                 className={
                   router.pathname === "/works"
-                    ? [styles.list__link, styles.linkLeftActive].join(" ")
-                    : [styles.list__link, styles.linkLeft].join(" ")
+                    ? [
+                        styles["header__list-link"],
+                        styles["link-left__active"],
+                      ].join(" ")
+                    : [styles["header__list-link"], styles["link-left"]].join(
+                        " "
+                      )
                 }
               >
                 Works
               </Link>
             </li>
-            <li className={styles.list__item}>
+            <li className={styles["header__list-item"]}>
               <Link
                 href={"/contacts"}
                 className={
                   router.pathname === "/contacts"
-                    ? [styles.list__link, styles.linkRightActive].join(" ")
-                    : [styles.list__link, styles.linkRight].join(" ")
+                    ? [
+                        styles["header__list-link"],
+                        styles["link-right__active"],
+                      ].join(" ")
+                    : [styles["header__list-link"], styles["link-right"]].join(
+                        " "
+                      )
                 }
               >
                 Contacts
               </Link>
             </li>
-            <li className={styles.list__item}>
+            <li className={styles["header__list-item"]}>
               <Link
                 href={"/blog"}
                 className={
                   router.pathname === "/blog"
-                    ? [styles.list__link, styles.linkRightActive].join(" ")
-                    : [styles.list__link, styles.linkRight].join(" ")
+                    ? [
+                        styles["header__list-link"],
+                        styles["link-right__active"],
+                      ].join(" ")
+                    : [styles["header__list-link"], styles["link-right"]].join(
+                        " "
+                      )
                 }
               >
                 Blog

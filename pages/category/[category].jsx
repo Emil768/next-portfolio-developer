@@ -42,25 +42,26 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: {
+      categoryTitle: slugCategory,
       blog: allCategoriesEntries.items,
       categoryItems: categoryEntries.items,
     },
   };
 };
 
-const Category = ({ categoryItems, blog }) => {
+const Category = ({ categoryItems, categoryTitle, blog }) => {
   const [searchArticle, setSearchArticle] = useState("");
   const filterCategoriesItems = filterArticles(categoryItems, searchArticle);
 
   return (
     <section className={`${styles.category} blog__bg`}>
       <Head>
-        <title>Категория</title>
+        <title>{`${categoryTitle} | Категория`}</title>
         <meta
           name="description"
           content="Блог о жизни фронтенд разработчика а также его познаниями за последние годы."
         />
-        <meta property="og:title" content="Blog | Emil Murahas" />
+        <meta property="og:title" content={`${categoryTitle}`} />
         <meta
           property="og:description"
           content="Блог о жизни фронтенд разработчика а также его познаниями за последние годы."

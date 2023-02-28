@@ -30,3 +30,9 @@
     position: relative;
   }
 }
+
+@media (max-width: 890px) {
+  .blog {
+    padding-bottom: 20px;
+  }
+}
