@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import styles from "styles/Home.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ReactIcon } from "public/img";
 import Head from "next/head";
 import Image from "next/image";
+import styles from "styles/Home.module.scss";
 
-function Home() {
+const Home = () => {
   useEffect(() => {
     AOS.init({ disable: "phone" });
   }, []);
@@ -64,6 +64,6 @@ function Home() {
       </div>
     </section>
   );
-}
+};
 
 export default Home;

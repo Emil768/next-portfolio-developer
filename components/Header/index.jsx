@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ThemeButton from "../ThemeButton";
 import styles from "./Header.module.scss";
-
-import { ThemeButton } from "../ThemeButton";
 
 const Header = () => {
   const router = useRouter();
-
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -25,7 +23,6 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.list__item}>
-              {" "}
               <Link
                 href={"/contacts"}
                 className={
@@ -35,6 +32,18 @@ const Header = () => {
                 }
               >
                 Contacts
+              </Link>
+            </li>
+            <li className={styles.list__item}>
+              <Link
+                href={"/blog"}
+                className={
+                  router.pathname === "/blog"
+                    ? [styles.list__link, styles.linkRightActive].join(" ")
+                    : [styles.list__link, styles.linkRight].join(" ")
+                }
+              >
+                Blog
               </Link>
             </li>
           </ul>

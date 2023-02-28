@@ -1,6 +1,7 @@
 export { default as AuthorIcon } from "./author.jpg";
 export { default as ArrowIcon } from "./arrow.png";
 
+export { default as EmptyIcon } from "./empty.webp";
 export { default as ReactNotesIcon } from "./react_notes.jpg";
 export { default as React_notesIcon } from "./react-notes.png";
 export { default as React_comixIcon } from "./react-comix.png";

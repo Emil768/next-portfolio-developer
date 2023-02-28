@@ -3,7 +3,7 @@ import { skills } from "data";
 import { AuthorIcon, ArrowIcon } from "public/img";
 import Image from "next/image";
 
-const About = () => (
+export const About = () => (
   <section className={styles.about}>
     <div className={styles.about__top}>
       <h1 className={styles.about__title} data-aos="zoom-in-down">
@@ -75,5 +75,3 @@ const About = () => (
     </div>
   </section>
 );
-
-export default About;

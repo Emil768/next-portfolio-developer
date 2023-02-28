@@ -2,7 +2,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-export const ThemeButton = () => {
+const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const onToggleTheme = () => {
@@ -30,3 +30,5 @@ export const ThemeButton = () => {
     </>
   );
 };
+
+export default ThemeButton;

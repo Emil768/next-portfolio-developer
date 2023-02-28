@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import styles from "styles/Works.module.scss";
 import Image from "next/image";
-import About from "@/components/About";
 import { projects } from "@/data";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
+import { About } from "@/components";
+import styles from "styles/Works.module.scss";
 
-function Works() {
+const Works = () => {
   useEffect(() => {
     AOS.init({ disable: "phone" });
   }, []);
@@ -41,7 +41,7 @@ function Works() {
             {projects.map((item, index) => (
               <div className={styles.list__item} key={index}>
                 <div
-                  className={`${styles.list__info} list__info-dark`}
+                  className={`${styles.list__info} background-dark`}
                   data-aos="zoom-in"
                   data-aos-duration="1200"
                 >
@@ -161,6 +161,6 @@ function Works() {
       </div>
     </section>
   );
-}
+};
 
 export default Works;

@@ -1,0 +1,32 @@
+.blog {
+  padding: 140px 0 180px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  &__empty {
+    grid-row: 1;
+    grid-column: 8 span;
+    text-align: center;
+    font-size: 22px;
+    height: 100vh;
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-image {
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+
+  .container {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+  }
+}

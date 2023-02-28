@@ -1,35 +1,11 @@
 import React, { useState } from "react";
-import styles from "styles/Contact.module.scss";
-import emailjs from "emailjs-com";
 import { ClipLoader } from "react-spinners";
 import Head from "next/head";
+import { sendEmail } from "@/utils";
+import styles from "styles/Contact.module.scss";
 
-function Contact() {
+const Contact = () => {
   const [loading, setLoading] = useState(false);
-
-  function sendEmail(e) {
-    e.preventDefault();
-    setLoading(true);
-    emailjs
-      .sendForm(
-        "service_vubqzu9",
-        "template_bg3j9q9",
-        e.target,
-        "Q7UCrPjB9lUFde00W"
-      )
-      .then(
-        (result) => {
-          setLoading(false);
-          alert("Thanks!");
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Something went wrong...");
-        }
-      );
-  }
-
   return (
     <section className={`${styles.contact} contact__bg`}>
       <Head>
@@ -57,7 +33,10 @@ function Contact() {
         </div>
 
         <div className={styles.contact__content}>
-          <form className={styles.form} onSubmit={sendEmail}>
+          <form
+            className={styles.form}
+            onSubmit={(e) => sendEmail(e, setLoading)}
+          >
             <input
               className={styles.form__input}
               type="text"
@@ -99,6 +78,6 @@ function Contact() {
       </div>
     </section>
   );
-}
+};
 
 export default Contact;
