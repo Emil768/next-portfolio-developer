@@ -1,3 +1,5 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 
 export const optionsDate = {
@@ -10,6 +12,8 @@ export const optionsDate = {
   day: "numeric",
 };
 
+const Text = ({ children }) => <p>{children}</p>;
+
 export const optionsText = {
   renderNode: {
     "embedded-asset-block": (node) => (
@@ -21,5 +25,7 @@ export const optionsText = {
         />
       </div>
     ),
+    renderText: (text) =>
+      text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
   },
 };

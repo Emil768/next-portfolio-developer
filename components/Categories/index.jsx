@@ -6,7 +6,7 @@ const Categories = ({ categoryEntries }) => {
   const router = useRouter();
   return (
     <div className={styles.categories}>
-      <div className={styles.categories__content}>
+      <div className={`${styles.categories__content} background-dark`}>
         <div className={styles.categories__title}>Категории</div>
         <ul className={styles.categories__list}>
           {[...categoryEntries.entries()].map(([key, value]) => {

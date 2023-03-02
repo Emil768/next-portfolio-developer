@@ -17,12 +17,7 @@
     font-size: 18px;
     margin-bottom: 40px;
   }
-  &__img {
-    width: 30%;
-    img {
-      max-width: 100%;
-    }
-  }
+
   &__loader {
     position: absolute;
     right: 0;
@@ -54,6 +49,7 @@
         border-color: #40b0ee;
       }
       &::placeholder {
+        color: #959595;
         font-family: inherit;
       }
     }
@@ -77,6 +73,7 @@
       }
     }
     &__btn {
+      color: #959595;
       font-size: 18px;
       font-family: inherit;
       cursor: pointer;

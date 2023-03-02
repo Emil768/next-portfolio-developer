@@ -88,3 +88,9 @@
     grid-column: 6 span;
   }
 }
+
+@media (max-width: 587px) {
+  .blogItem {
+    grid-column: 12 span;
+  }
+}

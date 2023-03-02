@@ -5,6 +5,7 @@ import { optionsDate, optionsText } from "@/data";
 import Head from "next/head";
 import styles from "styles/Article.module.scss";
 import Link from "next/link";
+import { Footer } from "@/components";
 
 export const getStaticPaths = async () => {
   const articleEntries = await client.getEntries({

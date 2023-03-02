@@ -92,8 +92,6 @@
 
 @media (max-width: 890px) {
   .categories {
-    margin-left: 20px;
-
     &__title {
       border-bottom: 0;
       border-right: 1px solid #959595;
@@ -131,5 +129,11 @@
         height: 20px;
       }
     }
+  }
+}
+
+@media (max-width: 587px) {
+  .categories {
+    width: 100%;
   }
 }

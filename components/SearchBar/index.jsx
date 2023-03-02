@@ -4,7 +4,7 @@ const SearchBar = ({ setSearchArticle }) => {
   return (
     <div className={styles.searchbar}>
       <input
-        className={styles.searchbar__input}
+        className={`${styles.searchbar__input} background-dark background-dark__input`}
         onChange={(e) => setSearchArticle(e.target.value)}
         placeholder="Поиск..."
         maxLength={15}

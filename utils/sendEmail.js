@@ -5,10 +5,10 @@ export const sendEmail = (e, setLoading) => {
   setLoading(true);
   emailjs
     .sendForm(
-      "service_vubqzu9",
-      "template_bg3j9q9",
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID,
       e.target,
-      "Q7UCrPjB9lUFde00W"
+      process.env.NEXT_PUBLIC_USER_ID
     )
     .then(
       (result) => {

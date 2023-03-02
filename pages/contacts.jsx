@@ -38,7 +38,7 @@ const Contact = () => {
             onSubmit={(e) => sendEmail(e, setLoading)}
           >
             <input
-              className={styles.form__input}
+              className={`${styles.form__input} background-dark background-dark__input`}
               type="text"
               placeholder="First name"
               name="name"
@@ -46,7 +46,7 @@ const Contact = () => {
             />
 
             <input
-              className={styles.form__input}
+              className={`${styles.form__input} background-dark background-dark__input`}
               type="text"
               placeholder="Last name"
               name="surname"
@@ -54,7 +54,7 @@ const Contact = () => {
             />
 
             <input
-              className={styles.form__input}
+              className={`${styles.form__input} background-dark background-dark__input`}
               type="email"
               placeholder="E-mail"
               name="email"
@@ -62,7 +62,7 @@ const Contact = () => {
             />
 
             <textarea
-              className={styles.form__text}
+              className={`${styles.form__text} background-dark background-dark__input`}
               cols="30"
               rows="10"
               placeholder="Message"
@@ -70,7 +70,10 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button className={styles.form__btn} type="submit">
+            <button
+              className={`${styles.form__btn} background-dark background-dark__button`}
+              type="submit"
+            >
               Send
             </button>
           </form>
