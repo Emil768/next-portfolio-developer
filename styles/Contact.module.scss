@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-
+  flex: 1 0 0;
   &__content {
     max-width: 800px;
   }
@@ -108,12 +107,6 @@
         }
       }
     }
-  }
-}
-
-@media (max-height: 740px) {
-  .contact {
-    height: 100%;
   }
 }
 
