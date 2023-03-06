@@ -1,6 +1,7 @@
 import {
   GithubFinderIcon,
   NextPortfolioIcon,
+  QuotesIcon,
   React_comixIcon,
   React_notesIcon,
   ShopIcon,
@@ -71,7 +72,15 @@ export const projects = [
     link: "https://mern-notes-frontend.vercel.app/",
     gitLink: "https://github.com/Emil768/mern-notes-frontend",
   },
-
+  {
+    preview: QuotesIcon,
+    title: "Quotes-app 🎯",
+    text: "Typing speed test app, only English quotes are supported at the moment.",
+    tags: ["ReactJs", "Typescript", "use-sound"],
+    youtube: "https://www.youtube.com/watch?v=Jn3F2l7VxZg&feature=youtu.be",
+    link: "https://quotes-app-navy.vercel.app/",
+    gitLink: "https://github.com/Emil768/fast-print",
+  },
   {
     preview: React_comixIcon,
     title: "React-comix 🛒",
@@ -88,7 +97,6 @@ export const projects = [
     link: "https://react-comix-v-2.vercel.app/",
     gitLink: "https://github.com/Emil768/react-comix-v.2",
   },
-
   {
     preview: ShopIcon,
     title: "Internet-shop 🛒",

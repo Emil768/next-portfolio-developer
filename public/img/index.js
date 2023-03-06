@@ -9,6 +9,7 @@ export { default as ShopIcon } from "./internetShop.png";
 export { default as TrelloIcon } from "./trello.png";
 export { default as VKLoaderIcon } from "./vk-loader.png";
 export { default as GithubFinderIcon } from "./github-finder.png";
+export { default as QuotesIcon } from "./quotes-app.png";
 
 export { default as GithubIcon } from "./github.svg";
 export { default as LinkIcon } from "./link.svg";
