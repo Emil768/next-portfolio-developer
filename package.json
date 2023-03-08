@@ -20,9 +20,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-spinners": "0.13.8",
-    "react-toggle-dark-mode": "1.1.1"
+    "react-toggle-dark-mode": "1.1.1",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "sass": "1.57.1"
+    "sass": "1.57.1",
+    "url-loader": "^4.1.1"
   }
 }

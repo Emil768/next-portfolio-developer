@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import ThemeButton from "../ThemeButton";
+import boopSound from "@/public/sounds/boop.mp3";
+import useSound from "use-sound";
 import styles from "./Header.module.scss";
 
 const Header = () => {
   const router = useRouter();
+  const [play] = useSound(boopSound);
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -13,6 +16,7 @@ const Header = () => {
             <li className={styles["header__list-item"]}>
               <Link
                 href={"/works"}
+                onClick={() => play()}
                 className={
                   router.pathname === "/works"
                     ? [
@@ -30,6 +34,7 @@ const Header = () => {
             <li className={styles["header__list-item"]}>
               <Link
                 href={"/contacts"}
+                onClick={() => play()}
                 className={
                   router.pathname === "/contacts"
                     ? [
@@ -47,6 +52,7 @@ const Header = () => {
             <li className={styles["header__list-item"]}>
               <Link
                 href={"/blog"}
+                onClick={() => play()}
                 className={
                   router.pathname === "/blog"
                     ? [
