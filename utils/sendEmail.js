@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 
-export const sendEmail = (e, setLoading) => {
+export const sendEmail = (e, setLoading, play) => {
   e.preventDefault();
   setLoading(true);
   emailjs
@@ -13,6 +13,7 @@ export const sendEmail = (e, setLoading) => {
     .then(
       (result) => {
         setLoading(false);
+        play();
         alert("Thanks!");
         e.target.reset();
       },

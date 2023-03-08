@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import Head from "next/head";
 import { sendEmail } from "@/utils";
+import notificationSound from "@/public/sounds/notification.mp3";
+import useSound from "use-sound";
 import styles from "styles/Contact.module.scss";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [play] = useSound(notificationSound);
   return (
     <section className={`${styles.contact} contact__bg`}>
       <Head>
@@ -35,7 +38,7 @@ const Contact = () => {
         <div className={styles.contact__content}>
           <form
             className={styles.form}
-            onSubmit={(e) => sendEmail(e, setLoading)}
+            onSubmit={(e) => sendEmail(e, setLoading, play)}
           >
             <input
               className={`${styles.form__input} background-dark background-dark__input`}
