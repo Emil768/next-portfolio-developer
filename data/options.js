@@ -1,5 +1,3 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 
 export const optionsDate = {
@@ -11,8 +9,6 @@ export const optionsDate = {
   hour24: true,
   day: "numeric",
 };
-
-const Text = ({ children }) => <p>{children}</p>;
 
 export const optionsText = {
   renderNode: {
