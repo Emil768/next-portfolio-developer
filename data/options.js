@@ -18,6 +18,7 @@ export const optionsText = {
           fill
           src={`http:${node.data.target.fields.file.url}`}
           alt="preview"
+          quality={100}
         />
       </div>
     ),

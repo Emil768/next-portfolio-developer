@@ -7,7 +7,7 @@
   }
   &__title {
     font-size: 18px;
-    color: #959595;
+    color: #6b6a6a;
     padding-bottom: 20px;
     margin-bottom: 22px;
     border-bottom: 1px solid #f2f2f2;
@@ -76,11 +76,11 @@
     }
 
     &-title {
-      color: #959595;
+      color: #6b6a6a;
     }
 
     &-circle {
-      background-color: #6d6d6d;
+      background-color: #959595;
       border-radius: 30px;
       display: inline-block;
       height: 10px;
@@ -94,7 +94,7 @@
   .categories {
     &__title {
       border-bottom: 0;
-      border-right: 1px solid #959595;
+      border-right: 1px solid #6b6a6a;
       padding: 0 10px 0 0;
       margin: 0 10px 0 0;
     }
@@ -109,7 +109,7 @@
       &-item {
         margin: 0 10px 0 0;
         border-bottom: 0;
-        border-right: 1px solid #959595;
+        border-right: 1px solid #6b6a6a;
         padding: 0 10px 0 0;
         &:last-child {
           border-right: 0;
