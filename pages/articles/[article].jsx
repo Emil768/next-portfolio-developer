@@ -5,6 +5,7 @@ import { optionsDate, optionsText } from "@/data";
 import Head from "next/head";
 import styles from "styles/Article.module.scss";
 import Link from "next/link";
+import "react-medium-image-zoom/dist/styles.css";
 
 export const getStaticPaths = async () => {
   const articleEntries = await client.getEntries({
@@ -52,7 +53,7 @@ const Article = ({ article }) => {
   }, []);
 
   return (
-    <div className={`${styles.article} blog__bg`}>
+    <div className={`${styles.article} overlay-dark`}>
       <Head>
         <title>{`${title}`}</title>
         <meta name="description" content={`${previewText}`} />
@@ -64,8 +65,7 @@ const Article = ({ article }) => {
         />
         <meta property="og:type" content="article" />
       </Head>
-      <div className={`${styles.article__content} background-dark`}>
-        <h3 className={styles.article__title}>{title}</h3>
+      <div className={`${styles.article__content}`}>
         <div className={styles.article__info}>
           <div className={[styles.article__category].join(" ")}>
             <i className={styles["article__category-circle"]}></i>
@@ -78,6 +78,7 @@ const Article = ({ article }) => {
           </div>
           <div className={styles.article__date}>{dateArticle}</div>
         </div>
+        <h3 className={styles.article__title}>{title}</h3>
         <div className={styles.article__text}>
           {documentToReactComponents(text, optionsText)}
         </div>
