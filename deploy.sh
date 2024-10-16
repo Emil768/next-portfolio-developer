@@ -1,19 +1,16 @@
 #!/bin/bash
 
-# Установка PATH (путь может отличаться в зависимости от системы)
-export PATH=$PATH:/usr/local/bin:/usr/bin
-
-# Переходим в каталог с вашим проектом
-cd /path/to/your/project
+# Переходим в директорию с проектом
+cd /var/next-portfolio-developer
 
 # Получаем последние изменения из репозитория
 git pull origin main
 
 # Устанавливаем зависимости
-yarn install
+/root/.nvm/versions/node/v20.18.0/bin/yarn install 
 
 # Собираем проект
-yarn build
+/root/.nvm/versions/node/v20.18.0/bin/yarn build
 
 # Перезапускаем приложение с помощью PM2
-pm2 restart client || pm2 start yarn --name "client" -- start
+/root/.nvm/versions/node/v20.18.0/bin/pm2 restart client || /root/.nvm/versions/node/v20.18.0/bin/pm2start yarn --name "client" -- start
