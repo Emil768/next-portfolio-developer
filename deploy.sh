@@ -8,6 +8,7 @@ nvm use 20.18.0
 # Переходим в директорию с проектом
 cd /var/next-portfolio-developer
 
+git stash
 # Получаем последние изменения из репозитория
 git pull origin main
 
