@@ -1,18 +1,19 @@
 #!/bin/bash
-export PATH=$PATH:/usr/local/bin
 
-# Переходим в каталог с вашим приложением
-cd /var/next-portfolio-developer
+# Установка PATH (путь может отличаться в зависимости от системы)
+export PATH=$PATH:/usr/local/bin:/usr/bin
 
-# Обновляем репозиторий
+# Переходим в каталог с вашим проектом
+cd /path/to/your/project
+
+# Получаем последние изменения из репозитория
 git pull origin main
 
-# Устанавливаем зависимости (на случай, если они обновились)
+# Устанавливаем зависимости
 yarn install
 
-# Собираем приложение
+# Собираем проект
 yarn build
 
 # Перезапускаем приложение с помощью PM2
-pm2 restart client || pm2 start -n "client" "yarn start"
-
+pm2 restart client || pm2 start yarn --name "client" -- start
