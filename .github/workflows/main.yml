@@ -19,6 +19,9 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Deploy to server
+      env:
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        USERNAME: root
       run: |
-        ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
-        ssh user@${{ secrets.SERVER_IP }} 'bash -s' < ./deploy.sh
+        ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+        ssh $USERNAME@$SERVER_IP 'bash -s' < ./deploy.sh
