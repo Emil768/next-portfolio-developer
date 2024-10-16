@@ -33,7 +33,7 @@ const Home = () => {
             data-aos="zoom-in"
             data-aos-duration="800"
           >
-            &#60;Hello, World! I’m
+            &#60;Hello World! I’m
             <div className={styles.home__center}>
               <h1
                 className={styles.home__title}
