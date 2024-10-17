@@ -57,7 +57,7 @@ const Article = ({ article }) => {
 				title={`${title}`}
 				previewText={`${previewText}`}
 				content="article"
-				imageUrl={`http:${imageUrl.fields.file.url}`}
+				imageUrl={imageUrl.fields.file.url}
 			/>
 			<div className={`${styles.article__content}`}>
 				<div className={styles.article__info}>
