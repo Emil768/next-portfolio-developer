@@ -10,6 +10,7 @@ export default function Document() {
 				<link rel="apple-touch-icon" href="/logo_96.png" />
 				<link rel="manifest" href="manifest.json" />
 				<meta name="yandex-verification" content="114440d425a2ae0f" />
+				<meta name="google-site-verification" content="vbB-5GfCjJljgV3gG5JI1LbzVCR7jD-wlgEWpprJ0IU" />
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `
