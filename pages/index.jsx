@@ -25,6 +25,7 @@ const Home = () => {
         />
 
         <meta property="og:type" content="website" />
+        <meta name="yandex-verification" content="114440d425a2ae0f" />
       </Head>
       <div className={styles.container}>
         <div className={styles.home__content}>
