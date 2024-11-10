@@ -35,3 +35,5 @@ yarn.lock
 .env
 
 public/sw.js
+
+emil-developer-portfolio.crt

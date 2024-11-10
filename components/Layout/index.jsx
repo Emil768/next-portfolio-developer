@@ -1,11 +1,14 @@
-import Header from "../Header";
-import styles from "./Layout.module.scss";
+import { ThemeProvider } from 'next-themes';
+import { Header } from '../Header';
+import styles from './styles.module.scss';
+import { TelegramButton } from '../TelegramButton';
 
-const Layout = ({ children }) => (
-  <div className={styles.layout}>
-    <Header />
-    {children}
-  </div>
+export const Layout = ({ children }) => (
+	<ThemeProvider attribute="class" defaultTheme="dark">
+		<div className={styles.layout}>
+			<Header />
+			{children}
+			<TelegramButton />
+		</div>
+	</ThemeProvider>
 );
-
-export default Layout;

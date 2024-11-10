@@ -1,18 +1,18 @@
-.infopanel {
-  grid-row: 1/2 span;
-  grid-column: 4 span;
-  width: 300px;
-  justify-self: flex-end;
+.info-panel {
+	grid-row: 1/2 span;
+	grid-column: 4 span;
+	width: 300px;
+	justify-self: flex-end;
 }
 
 @media (max-width: 890px) {
-  .infopanel {
-    width: 100%;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    grid-row: 1;
-    grid-column: 1/12 span;
-  }
+	.info-panel {
+		width: 100%;
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		grid-row: 1;
+		grid-column: 1/12 span;
+	}
 }

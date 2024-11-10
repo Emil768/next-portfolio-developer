@@ -1,0 +1,199 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/font.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar-track {
+		margin-top: 100px;
+	}
+	&::-webkit-scrollbar {
+		width: 14px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border: 4px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		border-radius: 16px;
+		background-color: #babac0;
+	}
+
+	&.dark body {
+		color: $blue;
+		a {
+			color: $blue;
+		}
+		p {
+			color: $white;
+		}
+
+		input,
+		textarea,
+		button {
+			background-color: $white;
+			color: $black;
+		}
+		.skill-dark {
+			background-color: transparent;
+			border: 1px solid $blue;
+		}
+		.background-dark {
+			background-color: $black;
+			box-shadow: none;
+			border: 1px solid $blue;
+			&__input {
+				color: $white;
+			}
+			&__button {
+				color: $grey;
+			}
+		}
+		.border-fix {
+			border-top: 0;
+		}
+		.overlay-dark {
+			background-color: $black;
+		}
+		.yellow {
+			color: $yellow;
+		}
+		.dark-text_white {
+			color: $white;
+		}
+		.dark-icon_blue {
+			border: 2px solid $blue;
+		}
+		.dark-border_blue {
+			border-color: $blue;
+		}
+		.dark-border_white {
+			border-color: $white;
+		}
+	}
+	&.light body {
+		color: $black;
+	}
+
+	&.dark {
+		.home__bg {
+			background-image: url('/img/banner_rotate_dark.webp');
+		}
+		.works__bg {
+			background-image: url('/img/banner_dark.webp');
+		}
+		.contact__bg {
+			background-image: url('/img/banner_default_dark.webp');
+		}
+		.blog__bg {
+			background-image: url('/img/banner_dark.webp');
+		}
+	}
+}
+
+html,
+body,
+#__next {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	overflow: overlay;
+	font-family: 'Jost', 'Proxima Nova Rg', Arial, Helvetica, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.home__bg {
+	background-image: url('/img/banner_rotate.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.works__bg {
+	background-image: url('/img/banner.webp');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.contact__bg {
+	background-image: url('/img/banner_default.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.blog__bg {
+	background-image: url('/img/banner_default_light.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.rich-text {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	&__image {
+		max-width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.yellow {
+	color: $yellow !important;
+}
+
+.purple {
+	color: $purple !important;
+}
+
+.pre-purple {
+	color: $pre-purple !important;
+}
+
+.red {
+	color: $red !important;
+}
+
+.green {
+	color: $green !important;
+}
+
+.blue {
+	color: $blue !important;
+}
+
+.dashed {
+	border-bottom: 3px dotted $black;
+}
+
+.dashed-yellow {
+	border-bottom: 3px dotted $yellow;
+}
+
+.dashed-red {
+	border-bottom: 3px dotted $red;
+}
+
+@media (max-width: 587px) {
+	.rich-text {
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.rich-text {
+		margin: 0;
+	}
+}

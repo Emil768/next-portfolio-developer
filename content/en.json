@@ -1,0 +1,50 @@
+{
+	"Header": {
+		"works": "Projects",
+		"contacts": "Contacts",
+		"blog": "Blog"
+	},
+	"Home": {
+		"title": {
+			"who": "Who",
+			"i": "I"
+		},
+		"author": "My name is Emil, I am a developer from",
+		"country": "Crimea",
+		"doing": "I am engaged in",
+		"develop": "development and a bit of",
+		"design": "UI design",
+		"company": "Currently, I work at a company",
+		"plugin": "plugin for the company",
+		"stack": "My stack"
+	},
+	"Projects": {
+		"title": "My Projects",
+		"description": "Here are my favorite projects and commercial projects; unfortunately, not all projects have been released or can be shown.",
+		"works": {
+			"Next Portfolio-courses": "My three-month project that I did completely from scratch, and I am very pleased with it. The application includes: authorization, registration, adding/editing/deleting tests, profiles, comments, and much more interesting stuff 👌.",
+			"React-notes": "An application where each user can write their own note. The application includes: authorization, registration, and adding notes.",
+			"Quotes-app": "An application for testing typing speed; currently, only English quotes are supported.",
+			"React-comix": "An application where the interaction between a JSON server and a React app is implemented; overall, I think I did quite well.",
+			"Internet-shop": "My first online store. Here I learned to layout complex designs.",
+			"Github-finder": "My first application in TypeScript. Quite simple yet informative application.",
+			"VK-loader": "An application inspired by the file tab on vk.com. Of course, this is not a social network where files play a significant role, but I think I created a pretty good copy!",
+			"Trello": "Probably, there is no person who hasn’t made a todo app, so I decided to create something similar using native tools."
+		},
+		"go": "Go!"
+	},
+	"Contacts": {
+		"title": "Contacts",
+		"description": "If you have any questions, I am always happy to discuss them ✉️",
+		"firstname": "First Name",
+		"lastname": "Last Name",
+		"message": "Message",
+		"send": "Send"
+	},
+	"Blog": {
+		"search": "Search...",
+		"categories": "Categories",
+		"request": "By request",
+		"empty": "nothing found!"
+	}
+}

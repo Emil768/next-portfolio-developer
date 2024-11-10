@@ -1,0 +1,124 @@
+@import '../../styles/variables.scss';
+
+.button {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	height: 50px;
+	width: 50px;
+	z-index: 4;
+}
+
+.link {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: $telegram;
+	border-radius: 100%;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+	margin: 0 auto;
+	text-align: center;
+	opacity: 0.9;
+	transition: 0.3s all;
+	max-width: 100%;
+	height: 100%;
+	&:hover {
+		opacity: 1;
+		background: darken($telegram, 0.2);
+	}
+	&::before {
+		opacity: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -11%;
+		left: -11%;
+		right: 0;
+		bottom: 0;
+		content: '';
+		height: 90%;
+		width: 90%;
+		border: 8px solid rgba(0, 169, 221, 0.7);
+		border-radius: 100%;
+		animation-name: ripple;
+		animation-duration: 5s;
+		animation-delay: 0.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+		z-index: -1;
+	}
+
+	&::after {
+		opacity: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -11%;
+		left: -11%;
+		right: 0;
+		bottom: 0;
+		content: '';
+		height: 90%;
+		width: 90%;
+		border: 8px solid rgba(0, 169, 221, 0.7);
+		border-radius: 100%;
+		animation-name: ripple;
+		animation-duration: 5s;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+		z-index: -1;
+	}
+}
+
+@keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale3d(0.75, 0.75, 1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale3d(1.5, 1.5, 1);
+	}
+}
+
+.image {
+	max-width: 20px;
+	height: 100%;
+}
+
+@media (max-width: 590px) {
+	.button {
+		width: 30px;
+		height: 30px;
+		bottom: 10px;
+		right: 20px;
+	}
+
+	.link {
+		&::after {
+			top: -11%;
+			left: -11%;
+			border-width: 6px;
+			width: 80%;
+			height: 80%;
+		}
+		&::before {
+			top: -11%;
+			left: -11%;
+			border-width: 6px;
+			width: 80%;
+			height: 80%;
+		}
+	}
+	.image {
+		max-width: 16px;
+	}
+}
