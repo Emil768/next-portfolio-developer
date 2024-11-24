@@ -1,5 +1,5 @@
 {
-	"name": "Blog App",
+	"name": "Emil Blog",
 	"short_name": "Blog",
 	"icons": [
 		{
@@ -20,7 +20,7 @@
 	],
 	"theme_color": "#FFFFFF",
 	"background_color": "#FFFFFF",
-	"start_url": "/ru",
+	"start_url": "/",
 	"display": "standalone",
 	"orientation": "portrait"
 }

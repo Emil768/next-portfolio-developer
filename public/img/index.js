@@ -19,3 +19,4 @@ export { default as YoutubeIcon } from './youtube.svg';
 export { default as NextPortfolioIcon } from './next-portfolio.png';
 export { default as ReactIcon } from './react.svg';
 export { default as TelegramIcon } from './telegram.svg';
+export { default as ArrowLeft } from './arrow-left.svg';

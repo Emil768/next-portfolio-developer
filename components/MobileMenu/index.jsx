@@ -12,9 +12,7 @@ export const MobileMenu = () => {
 
 	const pathname = usePathname();
 
-	const locale = pathname.split('/')[1];
-
-	const menuItems = useMemo(() => getMenuItems(locale), [locale]);
+	const menuItems = useMemo(() => getMenuItems(), []);
 
 	const onSetMenuOpen = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -23,11 +21,9 @@ export const MobileMenu = () => {
 	return (
 		<div className={styles.menu}>
 			<Link
-				href={`/${locale}`}
+				href="/"
 				className={
-					pathname === `${locale}/`
-						? [styles.icon, styles.icon_active].join(' ')
-						: `${styles.icon} dark-icon_blue`
+					pathname === '/' ? [styles.icon, styles.icon_active].join(' ') : `${styles.icon} dark-icon_blue`
 				}
 			>
 				<Image src={ReactIcon} alt="root page" />

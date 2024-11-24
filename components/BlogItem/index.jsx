@@ -3,14 +3,14 @@ import styles from './BlogItem.module.scss';
 import Link from 'next/link';
 import { getBase64 } from '@/utils/getBase64';
 
-export const BlogItem = async ({ locale, title, imageUrl, category, previewText, slug }) => {
+export const BlogItem = async ({ title, imageUrl, category, previewText, slug }) => {
 	const imageTitle = imageUrl.fields.title;
 	const imageWidth = imageUrl.fields.file.details.image.width;
 	const imageHeight = imageUrl.fields.file.details.image.height;
 
 	const blurData = await getBase64(`http:${imageUrl.fields.file.url}`);
 	return (
-		<Link href={`/${locale}/articles/${slug}`} className={styles.blogItem}>
+		<Link href={`/articles/${slug}`} className={styles.blogItem}>
 			<div className={`${styles.blogItem__content} background-dark`}>
 				<div className={styles['blogItem__content-image']}>
 					<Image

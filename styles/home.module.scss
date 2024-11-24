@@ -8,6 +8,7 @@
 	grid-template-columns: repeat(12, 1fr);
 	gap: 30px;
 }
+
 .empty {
 	grid-row: 1;
 	grid-column: 8 span;

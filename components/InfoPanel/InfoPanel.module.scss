@@ -1,8 +1,53 @@
+@import '../../styles/variables.scss';
+
 .info-panel {
 	grid-row: 1/2 span;
 	grid-column: 4 span;
 	width: 300px;
 	justify-self: flex-end;
+	gap: 10px;
+}
+
+.link {
+	display: block;
+	font-size: 18px;
+	margin-left: auto;
+	width: fit-content;
+	padding: 10px 20px;
+	background: $blue;
+	color: white;
+	clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+		transform: translateY(100%);
+		transition: transform 0.6s ease;
+	}
+
+	&:hover,
+	&:focus {
+		background: darken(#66cbf7, 10%);
+		transform: translateY(-2px) skew(-5deg);
+
+		&::before {
+			transform: translateY(-100%);
+		}
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 890px) {
@@ -14,5 +59,11 @@
 		flex-wrap: wrap;
 		grid-row: 1;
 		grid-column: 1/12 span;
+	}
+}
+
+@media (max-width: 590px) {
+	.link {
+		font-size: 14px;
 	}
 }
