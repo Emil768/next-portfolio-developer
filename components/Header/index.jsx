@@ -1,22 +1,20 @@
 'use client';
-import { memo, useEffect, useMemo, useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { memo, useEffect, useState } from 'react';
+import { ArrowLeft } from '@/public/img';
 import ThemeButton from '../ThemeButton';
-import { useTranslations } from 'next-intl';
-import { LangSwitcher } from '../LangSwitcher';
-import { MobileMenu } from '../MobileMenu';
-import { getMenuItems } from '@/utils/getMenuItems';
 import styles from './styles.module.scss';
+import { usePathname, useRouter } from 'next/navigation';
 
 export const Header = memo(() => {
 	const [headerBlur, setHeaderBlur] = useState('');
+
+	const router = useRouter();
+
 	const pathname = usePathname();
-	const t = useTranslations('Header');
 
-	const locale = pathname.split('/')[1];
-
-	const menuItems = useMemo(() => getMenuItems(locale), [locale]);
+	const onBack = () => {
+		router.push('/');
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -37,40 +35,16 @@ export const Header = memo(() => {
 	return (
 		<header className={`${[styles.header, headerBlur ? styles[headerBlur] : ''].join(' ')}`}>
 			<div className={styles.container}>
-				<div className={styles.header__content}>
-					<MobileMenu />
-					<ul className={`${styles.header__list}`}>
-						{menuItems.map((item) => (
-							<li key={item.href} className={styles['header__list-item']}>
-								<Link
-									href={item.href}
-									className={
-										pathname === item.href
-											? [styles['header__list-link'], styles[item.active]].join(' ')
-											: [styles['header__list-link'], styles[item.hover]].join(' ')
-									}
-								>
-									{item.isIcon ? (
-										<span
-											className={
-												pathname === item.href
-													? [styles.icon, styles.icon_active].join(' ')
-													: `${styles.icon} dark-icon_blue`
-											}
-										>
-											{item.label}
-										</span>
-									) : (
-										t(item.label)
-									)}
-								</Link>
-							</li>
-						))}
-					</ul>
-					<div className={styles.header__switchers}>
-						<LangSwitcher />
-						<ThemeButton />
-					</div>
+				<div className={styles.content}>
+					{pathname !== '/' && (
+						<div className={styles.breadcrumbs}>
+							<div className={styles.breadcrumbs__item} onClick={onBack}>
+								<ArrowLeft />
+								<span>Вернуться</span>
+							</div>
+						</div>
+					)}
+					<ThemeButton />
 				</div>
 			</div>
 		</header>

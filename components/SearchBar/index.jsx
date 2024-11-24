@@ -9,8 +9,6 @@ export const SearchBar = () => {
 	const pathname = usePathname();
 	const { replace } = useRouter();
 
-	const t = useTranslations('Blog');
-
 	const onSetSearchArticle = useDebouncedCallback((text) => {
 		const params = new URLSearchParams(searchParams);
 		if (text) {
@@ -26,7 +24,7 @@ export const SearchBar = () => {
 			<input
 				className={`${styles.searchbar__input} background-dark background-dark__input`}
 				onChange={(e) => onSetSearchArticle(e.target.value)}
-				placeholder={t('search')}
+				placeholder="Поиск..."
 				maxLength={30}
 				type="text"
 				defaultValue={searchParams.get('query')?.toString()}

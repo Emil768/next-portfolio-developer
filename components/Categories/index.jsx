@@ -1,14 +1,12 @@
 'use client';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import styles from './styles.module.scss';
-import { useTranslations } from 'next-intl';
 
 export const Categories = ({ categories }) => {
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
-	const { replace } = useRouter();
 
-	const t = useTranslations('Blog');
+	const { replace, push } = useRouter();
 
 	const search = searchParams.get('category');
 
@@ -22,10 +20,16 @@ export const Categories = ({ categories }) => {
 		replace(`${pathname}?${params.toString()}`);
 	};
 
+	const onBack = () => {
+		push('/');
+	};
+
 	return (
 		<div className={styles.categories}>
 			<div className={`${styles.content} background-dark`}>
-				<div className={styles.title}>{t('categories')}</div>
+				<div className={styles.title} onClick={onBack}>
+					Категории
+				</div>
 				<ul className={styles.list}>
 					{[...categories.entries()].map(([key, value]) => {
 						return (

@@ -1,5 +1,5 @@
-@import '../../../styles/variables.scss';
-@import '../../../styles/font.scss';
+@import './styles/variables.scss';
+@import './styles/font.scss';
 
 * {
 	margin: 0;
@@ -148,6 +148,10 @@ a {
 		height: 100%;
 		object-fit: contain;
 	}
+}
+
+.white {
+	color: $white !important;
 }
 
 .yellow {

@@ -1,6 +1,14 @@
+import { Layout } from '@/components/Layout';
+import 'styles/global.scss';
+
+export const metadata = {
+	title: 'Blog | Emil Murahas',
+	description: 'Блог о жизни фронтенд разработчика из Крыма',
+};
+
 export default function RootLayout({ children }) {
 	return (
-		<html suppressHydrationWarning>
+		<html lang="ru" suppressHydrationWarning>
 			<head>
 				<meta name="theme-color" content="#90cdf4" />
 				<meta name="apple-mobile-web-app-status-bar" content="#90cdf4" />
@@ -25,7 +33,9 @@ export default function RootLayout({ children }) {
 					}}
 				/>
 			</head>
-			<body>{children}</body>
+			<body>
+				<Layout>{children}</Layout>
+			</body>
 		</html>
 	);
 }

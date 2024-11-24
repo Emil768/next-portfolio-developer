@@ -8,10 +8,10 @@ import { getBase64 } from '@/utils/getBase64';
 import styles from './styles.module.scss';
 
 export default async function Article({ params }) {
-	const { slug, locale } = await params;
+	const { slug } = await params;
 	const article = await getEntryBySlug(slug);
 
-	const dateLocale = locale === 'ru' ? 'ru-RU' : 'en-US';
+	const dateLocale = 'ru-RU';
 
 	return (
 		<div className={`${styles.article} overlay-dark`}>

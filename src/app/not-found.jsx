@@ -7,7 +7,7 @@ export default function NotFound() {
 	const router = useRouter();
 
 	useEffect(() => {
-		router.replace(`/ru`);
+		router.replace(`/`);
 	}, []);
 
 	return null;

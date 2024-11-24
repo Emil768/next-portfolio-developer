@@ -6,5 +6,4 @@ Allow: /
 Host: https://emil-developer-portfolio.ru
 
 # Sitemaps
-Sitemap: https://emil-developer-portfolio.ru/ru/sitemap
-Sitemap: https://emil-developer-portfolio.ru/en/sitemap
+Sitemap: https://emil-developer-portfolio.ru/sitemap.xml
