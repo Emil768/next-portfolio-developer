@@ -19,7 +19,7 @@ export default async function Article({ params }) {
 				<div className={styles.info}>
 					<div className={[styles.category].join(' ')}>
 						<i className={styles.category__circle}></i>
-						<Link href={`/category/${article?.category}`} className={styles.category__title}>
+						<Link href={`/?category=${article?.category}`} className={styles.category__title}>
 							{article?.category}
 						</Link>
 					</div>

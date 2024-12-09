@@ -1,5 +1,6 @@
 'use client';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { getQueryParams } from '@/utils/getQueryParams';
 import styles from './styles.module.scss';
 
 export const Categories = ({ categories }) => {
@@ -11,12 +12,8 @@ export const Categories = ({ categories }) => {
 	const search = searchParams.get('category');
 
 	const onSetCategoryQueryClick = (key) => {
-		const params = new URLSearchParams(searchParams);
-		if (key) {
-			params.set('category', key);
-		} else {
-			params.delete('category');
-		}
+		const params = getQueryParams(searchParams, key);
+
 		replace(`${pathname}?${params.toString()}`);
 	};
 
