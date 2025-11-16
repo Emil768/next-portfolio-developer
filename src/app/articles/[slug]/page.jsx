@@ -56,7 +56,7 @@ export default async function Article({ params }) {
 									</div>
 								);
 							},
-							renderText: (text) => text.split('\n').flatMap((text, i) => [i > 0 && <br />, text]),
+							renderText: (text) => text.split('\n').flatMap((text, item) => [item > 0 && <br />, text]),
 						},
 					})}
 				</div>
